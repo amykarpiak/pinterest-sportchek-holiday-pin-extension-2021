@@ -2,6 +2,152 @@
 @import './variables.scss';
 @import './mediaqueries.scss';
 
-body {
-    font-family: sans-serif;
+#Home{
+    position: relative;
+    background: #E72020;
+    box-shadow: inset 0px 70px 230px rgba(0, 0, 0, 0.42);
 }
+
+h2 {
+    margin-top: 40px;
+    font-family: 'Bagnard', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 52px;
+    line-height: 52px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 14px rgba(11, 11, 11, 0.25);
+}
+
+h1 {
+    margin-left: 20px;
+    font-family: 'Bagnard', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 14px rgba(11, 11, 11, 0.25);
+}
+
+h3 {
+    margin-top: 10px;
+    font-family: 'Bagnard', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 14px rgba(11, 11, 11, 0.25);
+}
+
+#column p {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: Bold;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 1.47739px 1.47739px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 25%;
+    bottom: 30%;
+    width: 130px;
+}
+
+#rightLight{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+
+#leftLight{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+#header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 40px;
+}
+
+#headerIcon {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    width: 171.06px;
+    height: 55px;
+}
+
+#frame{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 80.18px;
+    height: 41.7px;
+}
+
+#categories {
+    background: white;
+    height: 700px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#column {
+    display: flex;
+    justify-content: center;
+    margin: 10px; 
+    position: relative;
+}
+
+#square {
+    width: 256px;
+    height: 256px;
+    margin: 10px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+#circle{
+    width: 256px;
+    height: 256px;
+    margin: 10px;
+    border-radius: 200px;
+    object-fit: cover;
+}
+
+#footer{
+    background: #E72020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+
+#footer img{
+    width: 74.64px;
+    height: 24px;
+}
+
+#footer p{
+    color: white;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: Bold;
+    font-size: 14px;
+}
+
+
+

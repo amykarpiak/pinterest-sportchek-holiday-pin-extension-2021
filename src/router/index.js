@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 
 // Views.
 import Home from '@/views/Home.vue';
+import Kids from '@/views/Kids.vue';
 
 Vue.use(VueRouter);
 
@@ -12,6 +13,11 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/',
+        name: 'Kids',
+        component: Kids
     },
 ];
 

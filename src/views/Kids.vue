@@ -39,7 +39,7 @@
                     <p>Gifts for the Adventurer</p>
                 </div>
                 <div id="column">
-                    <router-link v-bind:to="'Kids'">
+                    <router-link v-bind:to="'/Kids'">
                         <img :src="'img/kids.png'" id="circle">
                     </router-link>
                     <p>Gifts for Kids</p>
@@ -67,15 +67,13 @@
                 <img :src="'img/logo.png'" id="logo">
                 <p>Privacy Policy•Terms & Conditions</p>
             </div>
-
-
     </section>
 </template>
 
 <script>
 
     export default {
-        name: 'Home',
+        name: 'Kids',
     }
 
 </script>
