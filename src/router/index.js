@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 
 // Views.
 import Home from '@/views/Home.vue';
-import Kids from '@/views/Kids.vue';
+import CategoryList from '@/views/CategoryList.vue';
 
 Vue.use(VueRouter);
 
@@ -15,9 +15,9 @@ const routes = [
         component: Home
     },
     {
-        path: '/',
-        name: 'Kids',
-        component: Kids
+        path: '/categories/:id',
+        name: 'categories',
+        component: CategoryList
     },
 ];
 

@@ -75,7 +75,8 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 40px;
+    padding: 60px;
+    
 }
 
 #headerIcon {
@@ -97,11 +98,12 @@ h3 {
 
 #categories {
     background: white;
-    height: 700px;
+    height: 600px;
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 #column {
@@ -148,6 +150,3 @@ h3 {
     font-weight: Bold;
     font-size: 14px;
 }
-
-
-
