@@ -62,61 +62,93 @@
     },
 
     "categories": {
-        "gifts-for-kids": [
-            {
-                "image": "/images/products/kids/CCMSuperTacks9350YouthHockeySkates.jpg",
-                "title": "CCM Super Tacks 9350 Youth Hockey Skates",
-                "link": "https://www.sportchek.ca/categories/kids/winter-sports-activities/hockey/skates/product/ccm-super-tacks-9350-youth-hockey-skates-333171720.html#"
-            },
-            {
-                "image": "/images/products/kids/CCMSuperTacks9350YouthHockeySkates.jpg",
-                "title": "UA Boys Pronto CB INS Puffer Jacket",
-                "link": "https://www.sportchek.ca/categories/shop-by-sport/holiday-gift-guide/gifts-for-kids/product/under-armour-boys-pronto-cool-base-insulated-puffer-jacket-color-333458837_01-333458837.html#333458837%5Bcolor%5D=333458837_01"
-            },
-            {
-                "image": "/images/products/kids/CCMSuperTacks9350YouthHockeySkates.jpg",
-                "title": "Nike Girls' Grade School Revolution 5 Running Shoes",
-                "link": "https://www.sportchek.ca/categories/shop-by-sport/running/running-shoes/product/nike-girls-grade-school-revolution-5-running-shoes-color-333481682_55-333481682.html#333481682%5Bcolor%5D=333481682_55"
-            },
-            {
-                "image": "/images/products/kids/CCMSuperTacks9350YouthHockeySkates.jpg",
-                "title": "The North Face Infant Campshire One Piece Suit",
-                "link": "https://www.sportchek.ca/categories/shop-by-sport/holiday-gift-guide/gifts-for-kids/jackets-snowsuits/product/the-north-face-infant-campshire-one-piece-suit-color-333501326_38-333501326.html#333501326%5Bcolor%5D=333501326_38"
-            },
-            {
-                "image": "/images/products/kids/CCMSuperTacks9350YouthHockeySkates.jpg",
-                "title": "adidas Originals Kids' Grade School Forum Mid Shoes",
-                "link": "https://www.sportchek.ca/categories/kids/footwear/casual-skate/product/adidas-originals-kids-grade-school-forum-mid-shoes-color-333494280_10-333494280.html#333494280%5Bcolor%5D=333494280_10"
-            }
-        ],
-        "gifts-for-her": [
-            {
-                "image": "",
-                "title": "Nike Women's Air Max 90 365 Shoes",
-                "link": "https://www.sportchek.ca/categories/women/back-to-school/back-to-school-basics/product/nike-womens-air-max-90-365-shoes-color-333167164_10-333167164.html#333167164%5Bcolor%5D=333167164_10"
-            },
-            {
-                "image": "",
-                "title": "Helly Hansen Women's Legendary Insulated Snow Pants",
-                "link": "https://www.sportchek.ca/categories/women/bottoms/snow-pants/product/helly-hansen-womens-legendary-insulated-snow-pants-color-332872786_01-332872786.html#332872786%5Bcolor%5D=332872786_01"
-            },
-            {
-                "image": "",
-                "title": "Nike Women's Yoga Layer Tank",
-                "link": "https://www.sportchek.ca/categories/wellness/yoga/womens-yoga/product/nike-womens-yoga-layer-tank-color-333273550_11-333273550.html#333273550%5Bcolor%5D=333273550_11"
-            },
-            {
-                "image": "",
-                "title": "Columbia Women's Plus Size Lay'D'Down Omni-HEAT™ Jacket",
-                "link": "https://www.sportchek.ca/categories/women/womens-jackets-coats-vests/winter-jackets/down-insulated-jackets/short-jackets/product/columbia-womens-plus-size-layddown-omni-heat-jacket-color-332602418_50-332602418.html#332602418%5Bcolor%5D=332602418_50"
-            },
-            {
-                "image": "",
-                "title": "Woods Women's Bennington Down Mitts",
-                "link": "https://www.sportchek.ca/categories/shop-by-sport/snowboarding/winter-accessories/womens/product/woods-womens-bennington-down-mitts-color-333447731_58-333447731.html#333447731%5Bcolor%5D=333447731_58"
-            }
-        ],
-        "gifts-for-the-adventurer": [
+        
+        "gifts-for-kids": {
+            "hero": [
+                {
+                    "image": "/img/kids.png",
+                    "header": "Gifts for Kids",
+                    "text": "Tap below to explore gift ideas to keep you moving all season"
+                }
+            ],
+
+            "products": [
+                {
+                    "image": "/images/products/kids/CCMSuperTacks9350YouthHockeySkates.png",
+                    "title": "CCM Super Tacks 9350 Youth Hockey Skates",
+                    "link": "https://www.sportchek.ca/categories/kids/winter-sports-activities/hockey/skates/product/ccm-super-tacks-9350-youth-hockey-skates-333171720.html#"
+                },
+                {
+                    "image": "/images/products/kids/UABoysProntoCBINSPufferJacket.png",
+                    "title": "UA Boys Pronto CB INS Puffer Jacket",
+                    "link": "https://www.sportchek.ca/categories/shop-by-sport/holiday-gift-guide/gifts-for-kids/product/under-armour-boys-pronto-cool-base-insulated-puffer-jacket-color-333458837_01-333458837.html#333458837%5Bcolor%5D=333458837_01"
+                },
+                {
+                    "image": "/images/products/kids/NikeGirls'GradeSchoolRevolution5RunningShoes.png",
+                    "title": "Nike Girls' Grade School Revolution 5 Running Shoes",
+                    "link": "https://www.sportchek.ca/categories/shop-by-sport/running/running-shoes/product/nike-girls-grade-school-revolution-5-running-shoes-color-333481682_55-333481682.html#333481682%5Bcolor%5D=333481682_55"
+                },
+                {
+                    "image": "/images/products/kids/TheNorthFaceInfantCampshireOnePieceSuit.png",
+                    "title": "The North Face Infant Campshire One Piece Suit",
+                    "link": "https://www.sportchek.ca/categories/shop-by-sport/holiday-gift-guide/gifts-for-kids/jackets-snowsuits/product/the-north-face-infant-campshire-one-piece-suit-color-333501326_38-333501326.html#333501326%5Bcolor%5D=333501326_38"
+                },
+                {
+                    "image": "/images/products/kids/adidasOriginalsKids'GradeSchoolForumMidShoes.png",
+                    "title": "adidas Originals Kids' Grade School Forum Mid Shoes",
+                    "link": "https://www.sportchek.ca/categories/kids/footwear/casual-skate/product/adidas-originals-kids-grade-school-forum-mid-shoes-color-333494280_10-333494280.html#333494280%5Bcolor%5D=333494280_10"
+                }
+            ]
+        },
+        "gifts-for-her":{
+            "hero": [
+                {
+                    "image": "",
+                    "header": "",
+                    "text": ""
+                }
+            ],
+
+            "products": [
+                {
+                    "image": "",
+                    "title": "Nike Women's Air Max 90 365 Shoes",
+                    "link": "https://www.sportchek.ca/categories/women/back-to-school/back-to-school-basics/product/nike-womens-air-max-90-365-shoes-color-333167164_10-333167164.html#333167164%5Bcolor%5D=333167164_10"
+                },
+                {
+                    "image": "",
+                    "title": "Helly Hansen Women's Legendary Insulated Snow Pants",
+                    "link": "https://www.sportchek.ca/categories/women/bottoms/snow-pants/product/helly-hansen-womens-legendary-insulated-snow-pants-color-332872786_01-332872786.html#332872786%5Bcolor%5D=332872786_01"
+                },
+                {
+                    "image": "",
+                    "title": "Nike Women's Yoga Layer Tank",
+                    "link": "https://www.sportchek.ca/categories/wellness/yoga/womens-yoga/product/nike-womens-yoga-layer-tank-color-333273550_11-333273550.html#333273550%5Bcolor%5D=333273550_11"
+                },
+                {
+                    "image": "",
+                    "title": "Columbia Women's Plus Size Lay'D'Down Omni-HEAT™ Jacket",
+                    "link": "https://www.sportchek.ca/categories/women/womens-jackets-coats-vests/winter-jackets/down-insulated-jackets/short-jackets/product/columbia-womens-plus-size-layddown-omni-heat-jacket-color-332602418_50-332602418.html#332602418%5Bcolor%5D=332602418_50"
+                },
+                {
+                    "image": "",
+                    "title": "Woods Women's Bennington Down Mitts",
+                    "link": "https://www.sportchek.ca/categories/shop-by-sport/snowboarding/winter-accessories/womens/product/woods-womens-bennington-down-mitts-color-333447731_58-333447731.html#333447731%5Bcolor%5D=333447731_58"
+                }
+            ]
+        },
+
+        "gifts-for-the-adventurer": {
+            
+            "hero": [
+                {
+                    "image": "",
+                    "header": "",
+                    "text": ""
+                }
+            ],
+
+            "products": [
             {
                 "image": "",
                 "title": "Fitbit Charge 5",
@@ -142,8 +174,18 @@
                 "title": "JetBoil Flash Stove 2.0 - Carbon",
                 "link": "https://www.sportchek.ca/categories/shop-by-sport/camping-equipment/camp-kitchen/product/jetboil-flash-stove-20-carbon-color-332521639_01-332521639.html#332521639%5Bcolor%5D=332521639_01"
             }
-        ],
-        "gifts-for-the-home-athlete": [
+        ]
+    },
+        "gifts-for-the-home-athlete": {
+            "hero": [
+                {
+                    "image": "",
+                    "header": "",
+                    "text": ""
+                }
+            ],
+            
+            "products": [
             {
                 "image": "",
                 "title": "UA Women's Meridian Tight Mauve Pink",
@@ -169,8 +211,19 @@
                 "title": "UA Men's Training Vent 2.0 Graphic Long Sleeve Shirt",
                 "link": "https://www.sportchek.ca/categories/men/tops/long-sleeves/product/under-armour-mens-training-vent-20-graphic-long-sleeve-shirt-333466987.html"
             }
-        ],
-        "gifts-for-the-fan": [
+        ]
+    },
+
+        "gifts-for-the-fan": {
+            "hero": [
+                {
+                    "image": "",
+                    "header": "",
+                    "text": ""
+                }
+            ],
+
+            "products": [
             {
                 "image": "",
                 "title": "Nike Team Canada Replica Hockey Jersey",
@@ -196,8 +249,18 @@
                 "title": "Toronto Raptors New Era 9FIFTY Draft Cap",
                 "link": "https://www.sportchek.ca/categories/shop-by-sport/holiday-gift-guide/gifts-for-the-fan/product/toronto-raptors-new-era-9fifty-draft-cap-333559187.html"
             }
-        ],
-        "gifts-for-warmth": [
+        ]
+    },
+
+        "gifts-for-warmth": {
+            "hero": [
+                {
+                    "image": "",
+                    "header": "",
+                    "text": ""
+                }
+            ],
+            "products": [
             {
                 "image": "",
                 "title": "Pur Serenity 8lb Weighted Outdoor Blanket",
@@ -223,8 +286,17 @@
                 "title": "Nike Women's Cold Weather Knit Gloves",
                 "link": "https://www.sportchek.ca/categories/shop-by-sport/holiday-gift-guide/gifts-under-50/product/nike-womens-cold-weather-knit-gloves-color-333216149_01-333216149.html#333216149%5Bcolor%5D=333216149_01"
             }
-        ],
-        "gifts-for-him": [
+        ]
+    },
+        "gifts-for-him": {
+            "hero": [
+                {
+                    "image": "",
+                    "header": "",
+                    "text": ""
+                }
+            ],
+            "products": [
             {
                 "image": "",
                 "title": "Hurley Dunes Heat Pullover Hoody",
@@ -250,8 +322,17 @@
                 "title": "Woods Men's Thomlinson Flannel Shacket",
                 "link": "https://www.sportchek.ca/categories/men/jackets-coats-vests/winter-jackets/down-insulated-jackets/product/woods-mens-thomlinson-flannel-shacket-333420751.html"
             }
-        ],
-        "gifts-for-the-hill": [
+        ]
+    },
+        "gifts-for-the-hill": {
+            "hero": [
+                {
+                    "image": "",
+                    "header": "",
+                    "text": ""
+                }
+            ],
+            "products": [
             {
                 "image": "",
                 "title": "Burton Step On Acid Wash Men’s Snowboard Bindings 2021/22",
@@ -288,5 +369,6 @@
                 "link": "https://www.sportchek.ca/categories/shop-by-sport/holiday-gift-guide/gifts-for-hill/goggles-helmets/product/giro-avera-mips-womens-ski-snowboard-helmet-2019-20-white-332931128.html"
             }
         ]
+    }
     }
 }

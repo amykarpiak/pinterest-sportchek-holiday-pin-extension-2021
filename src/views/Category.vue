@@ -14,7 +14,7 @@
             <div class="productListing">
                 <div class="products">
                     <div class="product" v-for="product in products" :key="product.title">
-                        <img :src="'{{ product.image }}'" alt="">
+                        <img :src="product.image" alt="image of product" class="productImage">
                         <h4>{{ product.title }}</h4>
                         <span><img :src="'/img/frameBlack.png'" class="frameBlack">Tap to Shop</span>
                     </div>
@@ -148,6 +148,11 @@ export default {
 
     .product:nth-child(3n) {
         margin-right: 0;
+    }
+
+    .product .productImage{
+        height: 230px;
+        margin-top: -50px;
     }
 
     .frameBlack{
