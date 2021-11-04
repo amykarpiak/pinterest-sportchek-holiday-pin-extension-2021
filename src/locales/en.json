@@ -1,6 +1,66 @@
 {
     "home": {
+        "title": {
+            "line1": "Holiday",
+            "line2": "Gift Guide"
+        },
+        "subtitle": "Tap below to explore gift ideas to keep you moving all season",
+        "categories": {
+            "row1": [
+                {
+                    "title": "Gifts for\nHer",
+                    "src": "/images/categories/her/bg.jpg",
+                    "id": "gifts-for-her",
+                    "shape": "square"
+                },
+                {
+                    "title": "Gifts for\nthe Fan",
+                    "src": "/images/categories/fan/bg.jpg",
+                    "id": "gifts-for-the-fan",
+                    "shape": "circle"
+                },
+                {
+                    "title": "Gifts for\nHim",
+                    "src": "/images/categories/him/bg.jpg",
+                    "id": "gifts-for-him",
+                    "shape": "square"
+                },
+                {
+                    "title": "Gifts for the\nAdventurer",
+                    "src": "/images/categories/adventurer/bg.jpg",
+                    "id": "gifts-for-the-adventurer",
+                    "shape": "circle"
+                }
+            ],
+            "row2": [
+                {
+                    "title": "Gifts for\nKids",
+                    "src": "/images/categories/kids/bg.jpg",
+                    "id": "gifts-for-kids",
+                    "shape": "circle"
+                },
+                {
+                    "title": "Gifts for the\nHome Athlete",
+                    "src": "/images/categories/athlete/bg.jpg",
+                    "id": "gifts-for-the-home-athlete",
+                    "shape": "square"
+                },
+                {
+                    "title": "Gifts for\nthe Hill",
+                    "src": "/images/categories/hill/bg.jpg",
+                    "id": "gifts-for-the-hill",
+                    "shape": "circle"
+                },
+                {
+                    "title": "Gifts for\nWarmth",
+                    "src": "/images/categories/warmth/bg.jpg",
+                    "id": "gifts-for-warmth",
+                    "shape": "square"
+                }
+            ]
+        }
     },
+
     "categories": {
         "gifts-for-kids": [
             {
