@@ -62,15 +62,13 @@
     },
 
     "categories": {
-        
+
         "gifts-for-kids": {
-            "hero": [
-                {
-                    "image": "/img/kids.png",
-                    "header": "Gifts for Kids",
-                    "text": "Tap below to explore gift ideas to keep you moving all season"
-                }
-            ],
+            "hero": {
+                "image": "/img/kids.png",
+                "header": "Gifts for Kids",
+                "text": "Tap below to explore gift ideas to keep you moving all season"
+            },
 
             "products": [
                 {
@@ -101,13 +99,11 @@
             ]
         },
         "gifts-for-her":{
-            "hero": [
-                {
-                    "image": "",
-                    "header": "",
-                    "text": ""
-                }
-            ],
+            "hero": {
+                "image": "",
+                "header": "",
+                "text": ""
+                },
 
             "products": [
                 {
@@ -139,15 +135,11 @@
         },
 
         "gifts-for-the-adventurer": {
-            
-            "hero": [
-                {
-                    "image": "",
-                    "header": "",
-                    "text": ""
-                }
-            ],
-
+            "hero": {
+                "image": "",
+                "header": "",
+                "text": ""
+            },
             "products": [
             {
                 "image": "",
@@ -177,13 +169,11 @@
         ]
     },
         "gifts-for-the-home-athlete": {
-            "hero": [
-                {
-                    "image": "",
-                    "header": "",
-                    "text": ""
-                }
-            ],
+            "hero": {
+                "image": "",
+                "header": "",
+                "text": ""
+                },
             
             "products": [
             {
@@ -215,13 +205,11 @@
     },
 
         "gifts-for-the-fan": {
-            "hero": [
-                {
-                    "image": "",
-                    "header": "",
-                    "text": ""
-                }
-            ],
+            "hero": {
+                "image": "",
+                "header": "",
+                "text": ""
+            },
 
             "products": [
             {
@@ -253,13 +241,11 @@
     },
 
         "gifts-for-warmth": {
-            "hero": [
-                {
-                    "image": "",
-                    "header": "",
-                    "text": ""
-                }
-            ],
+            "hero": {
+                "image": "",
+                "header": "",
+                "text": ""
+            },
             "products": [
             {
                 "image": "",
@@ -289,13 +275,11 @@
         ]
     },
         "gifts-for-him": {
-            "hero": [
-                {
-                    "image": "",
-                    "header": "",
-                    "text": ""
-                }
-            ],
+            "hero": {
+                "image": "",
+                "header": "",
+                "text": ""
+            },
             "products": [
             {
                 "image": "",
@@ -325,13 +309,11 @@
         ]
     },
         "gifts-for-the-hill": {
-            "hero": [
-                {
-                    "image": "",
-                    "header": "",
-                    "text": ""
-                }
-            ],
+            "hero":{
+                "image": "",
+                "header": "",
+                "text": ""
+            },
             "products": [
             {
                 "image": "",
