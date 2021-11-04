@@ -117,10 +117,8 @@ export default {
         margin-right: 50px;
         margin-bottom: 50px;
         background-color: color(White);
-
         border-radius: 20px;
         box-shadow: 0 15px 15px color(Black, 0.05);
-
     }
 
     .product span{
