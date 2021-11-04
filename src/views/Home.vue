@@ -15,49 +15,49 @@
             </div>
             <div id="categories">
                 <div id="column">
-                    <router-link to="/categories/gifts-for-her">
+                    <router-link to="/category/gifts-for-her">
                         <img :src="'img/her.png'" id="square">
                     </router-link>
                     <p>Gifts for Her</p>
                 </div>
                 <div id="column">
-                    <router-link to="/categories/gifts-for-the-fan">
+                    <router-link to="/category/gifts-for-the-fan">
                         <img :src="'img/fan.png'" id="circle">
                     </router-link>
                     <p>Gifts for the Fan</p>
                 </div>
                 <div id="column">
-                    <router-link to="/categories/gifts-for-him">
+                    <router-link to="/category/gifts-for-him">
                         <img :src="'img/him.png'" id="square">
                     </router-link>
                     <p>Gifts for Him</p>
                 </div>
                 <div id="column">
-                    <router-link to="/categories/gifts-for-the-adventurer">
+                    <router-link to="/category/gifts-for-the-adventurer">
                         <img :src="'img/adventurer.png'" id="circle">
                     </router-link>
                     <p>Gifts for the Adventurer</p>
                 </div>
                 <div id="column">
-                    <router-link to="/categories/gifts-for-kids">
+                    <router-link to="/category/gifts-for-kids">
                         <img :src="'img/kids.png'" id="circle">
                     </router-link>
                     <p>Gifts for Kids</p>
                 </div>
                 <div id="column">
-                    <router-link to="/categories/gifts-for-the-home-athlete">
+                    <router-link to="/category/gifts-for-the-home-athlete">
                         <img :src="'img/homeAthlete.png'" id="square">
                     </router-link>
                     <p>Gifts for the Home Athlete</p>
                 </div>
                 <div id="column">
-                    <router-link to="/categories/gifts-for-the-hill">
+                    <router-link to="/category/gifts-for-the-hill">
                         <img :src="'img/hill.png'" id="circle">
                     </router-link>
                     <p>Gifts for the Hill</p>
                 </div>
                 <div id="column">
-                    <router-link to="/categories/gifts-for-warmth">
+                    <router-link to="/category/gifts-for-warmth">
                         <img :src="'img/warmth.png'" id="square">
                     </router-link>
                     <p>Gifts for Warmth</p>

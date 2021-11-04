@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 
 // Views.
 import Home from '@/views/Home.vue';
-import CategoryList from '@/views/CategoryList.vue';
+import Category from '@/views/Category.vue';
 
 Vue.use(VueRouter);
 
@@ -15,9 +15,9 @@ const routes = [
         component: Home
     },
     {
-        path: '/categories/:id',
-        name: 'categories',
-        component: CategoryList
+        path: '/category/:id',
+        name: 'category',
+        component: Category
     },
 ];
 
