@@ -3,12 +3,12 @@
         <div class="hero">
             <div id="headerIcon">
                 <img :src="'/img/logo.png'" id="logo">
-                </div>
-                <h1>Gifts for Kids</h1>
-                <h3>Tap below to explore gift ideas to keep you moving all season</h3>
-                <div id="headerIcon">
-                    <img :src="'/img/frame.png'" id="frame">
-                </div>
+            </div>
+            <h1>Gifts for Kids</h1>
+            <h3>Tap below to explore gift ideas to keep you moving all season</h3>
+            <div id="headerIcon">
+                <img :src="'/img/frame.png'" id="frame">
+            </div>
         </div>
         <div class="wrapper">
             <div class="productListing">
