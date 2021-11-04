@@ -36,10 +36,6 @@
                 <p>Gifts for the Fan ></p>
             </router-link>
         </div>
-        <div id="footer">
-            <img :src="'/img/logo.png'" id="logo">
-            <p>Privacy Policy•Terms & Conditions</p>
-        </div>
     </section>
 </template>
 
@@ -59,6 +55,8 @@ export default {
 <style lang="scss" scoped>
 
     @import '../styles/_variables.scss';
+    @import '../styles/_mediaqueries.scss';
+
 
     #Category{
         background: #E72020;
@@ -67,10 +65,26 @@ export default {
 
     h1{
         margin-top: 100px;
+        font-family: 'Bagnard', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 70px;
+        line-height: 70px;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 14px rgba(11, 11, 11, 0.25);
     }
 
     h3{
         margin-top: 40px;
+        font-family: 'Bagnard', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 14px rgba(11, 11, 11, 0.25);
     }
 
     h4{
