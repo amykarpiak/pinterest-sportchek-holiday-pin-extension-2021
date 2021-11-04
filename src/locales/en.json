@@ -65,7 +65,7 @@
         "gifts-for-kids": {
             "index": 4,
             "hero": {
-                "image": "/img/giftsforkids.png",
+                "image": "/images/products/kids/kids.jpg",
                 "header": "Gifts for Kids",
                 "text": "Tap below to explore gift ideas to keep you moving all season"
             },
@@ -100,7 +100,7 @@
         "gifts-for-her":{
             "index": 0,
             "hero": {
-                "image": "/images/products/her/giftsforher.png",
+                "image": "/images/products/her/her.jpg",
                 "header": "Gifts for Her",
                 "text": "Check everything off her list this season"
                 },

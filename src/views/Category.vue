@@ -14,9 +14,11 @@
             <div class="productListing">
                 <div class="products">
                     <div class="product" v-for="product in products" :key="product.title">
+                        <a :href="product.link">
                         <img :src="product.image" alt="image of product" class="productImage">
                         <h4>{{ product.title }}</h4>
                         <span><img :src="'/img/frameBlack.png'" class="frameBlack">Tap to Shop</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -126,6 +128,7 @@ export default {
         font-size: 16px;
         line-height: 19px;
         text-align: center;
+        margin: 5px;
     }
 
     .hero{
@@ -186,6 +189,11 @@ export default {
         margin-top: -50px;
     }
 
+    .product a{
+        text-decoration: none;
+        color: black;
+    }
+
     .frameBlack{
         width: 40px;
         height: 20px;
@@ -197,19 +205,19 @@ export default {
     }
 
     .leftPresent {
-        width: 220px;
-        height: 334.7px;
+        width: 15%;
         bottom: -44%;
         left: 0%;
         position: absolute;
+        z-index: 0;
     }
 
     .rightPresent {
-        width: 251px;
-        height: 244px;
+        width: 20%;
         bottom: -44%;
         right: 0%;
         position: absolute;
+        z-index: 0;
     }
 
     .secondaryNav{
@@ -220,7 +228,7 @@ export default {
         font-weight: bold;
         font-size: 18px;
         line-height: 22px;
-        padding: 20px;
+        padding: 5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -248,9 +256,14 @@ export default {
 
     svg:hover path{
         fill: #E72020;
+        padding: 0px;
     }
 
-@media only screen and (max-width: 600px) {
+    i{
+        width: 20px;
+    }
+
+@media only screen and (max-width: 950px) {
     #Category{
         background: #E72020;
         box-shadow: inset 0px 70px 230px rgba(0, 0, 0, 0.42);
@@ -274,7 +287,7 @@ export default {
     }
 
     .hero{
-        height: 600px;
+        height: 650px;
         background-image: url("/img/giftsforkids.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -299,18 +312,17 @@ export default {
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .product {
-        width: 160px;
-        height: 250px;
+        width: 200px;
+        height: 300px;
         margin: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         background-color: color(White);
         border-radius: 20px;
         box-shadow: 0 15px 15px color(Black, 0.05);
-
     }
 
     .product span{
@@ -336,22 +348,23 @@ export default {
 
     .presents{
         position: relative;
+        z-index: 0;
     }
 
     .leftPresent {
-        width: 130px;
-        height: 200px;
+        width: 160px;
         bottom: -60%;
         left: 0%;
         position: absolute;
+        z-index: 0;
     }
 
     .rightPresent {
         width: 200px;
-        height: 150px;
         bottom: 0%;
         right: 0%;
         position: absolute;
+        z-index: 0;
     }
 
     .secondaryNav{
@@ -362,7 +375,7 @@ export default {
         font-weight: bold;
         font-size: 14px;
         line-height: 22px;
-        padding: 20px;
+        padding: 5px;
         display: flex;
         justify-content: space-between;
     }
