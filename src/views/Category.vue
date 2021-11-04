@@ -26,16 +26,16 @@
             <img :src="'/img/rightPresentCategory.png'" class="rightPresent">
         </div>
         <div class="secondaryNav">
-            <router-link to="/category/gifts-for-the-adventurer">
-                <p>< h</p>
+            <router-link :to="`/category/${ prevCategory[0][0] }`">
+                <p>{{ prevCategory[0][1].hero.header }}</p>
             </router-link>
-            <router-link to="/home">
+            <router-link to="/">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M29.3273 19.2191C29.7585 19.5642 29.8285 20.1934 29.4834 20.6247C29.1384 21.056 28.5091 21.1259 28.0779 20.7809L26.2212 19.2955V26.962C26.2212 27.5143 25.7735 27.962 25.2212 27.962H14.7781C14.2258 27.962 13.7781 27.5143 13.7781 26.962V19.2961L11.9222 20.7809C11.4909 21.1259 10.8616 21.056 10.5166 20.6247C10.1716 20.1934 10.2415 19.5642 10.6728 19.2191L19.3753 12.2571C19.7405 11.9649 20.2595 11.9649 20.6247 12.2571L29.3273 19.2191ZM15.7781 17.6961V25.962H24.2212V17.6955L20 14.3186L15.7781 17.6961Z" fill="white"/>
                 </svg>
             </router-link>
-            <router-link to="/category/gifts-for-the-fan">
-                <p>Gifts for the Fan ></p>
+            <router-link :to="`/category/${ nextCategory[0][0] }`">
+                <p>{{ nextCategory[0][1].hero.header }}</p>
             </router-link>
         </div>
     </section>
@@ -45,20 +45,41 @@
 
 export default {
     name: 'Category',
-    computed: {
-        data() {
-            return {
-                categoryIndex: this.$t('categories.${ this.$route.params.id }.index')
-            }
-        },
-        products() {
-            return this.$t(`categories.${ this.$route.params.id }.products`);
-        }, 
-
-        hero() {
-            return this.$t(`categories.${ this.$route.params.id }.hero`);
+    data() {
+        return {
+            index: this.$t(`categories.${ this.$route.params.id }`).index,
+            categories: this.$t('categories'),
         }
     },
+    computed: {
+        products() {
+            return this.$t(`categories.${ this.$route.params.id }.products`);
+        },
+        hero() {
+            return this.$t(`categories.${ this.$route.params.id }.hero`);
+        },
+        prevCategory() {
+
+            let prevIndex = this.index - 1;
+            if (prevIndex < 0) prevIndex = (Object.keys(this.categories).length - 1);
+
+            return Object.entries(this.categories).filter(category => category[1].index === prevIndex);
+
+        },
+        nextCategory() {
+
+            let nextIndex = this.index + 1;
+            if (nextIndex >= Object.keys(this.categories).length) nextIndex = 0;
+
+            return Object.entries(this.categories).filter(category => category[1].index === nextIndex);
+
+        }
+    },
+    watch: {
+        $route(to, from) {
+            this.index = this.$t(`categories.${ to.params.id }`).index;
+        }
+    }
 }
 
 </script>
@@ -170,7 +191,7 @@ export default {
         height: 20px;
         margin-right: 10px;
     }
-    
+
     .presents{
         position: relative;
     }
@@ -234,7 +255,7 @@ export default {
         background: #E72020;
         box-shadow: inset 0px 70px 230px rgba(0, 0, 0, 0.42);
     }
-    
+
     h1{
         margin-top: 100px;
     }
@@ -312,7 +333,7 @@ export default {
         height: 20px;
         margin-right: 5px;
     }
-    
+
     .presents{
         position: relative;
     }
