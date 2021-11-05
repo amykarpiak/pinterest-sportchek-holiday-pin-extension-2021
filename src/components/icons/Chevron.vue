@@ -17,9 +17,18 @@
 
 <style lang="scss" scoped>
 
+    @import '../../styles/_mediaqueries.scss';
+
     svg {
+
         width: 10px;
         height: 16px;
+
+        @include mobile-less {
+            width: 8px;
+            height: 13px;
+        }
+
     }
 
     svg.mirrored {

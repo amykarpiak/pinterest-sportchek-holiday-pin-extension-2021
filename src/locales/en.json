@@ -63,7 +63,10 @@
 
     "categories": {
         "gifts-for-kids": {
-            "index": 4,
+            "pagination": {
+                "index": 4,
+                "title": "Gifts\nfor Kids"
+            },
             "hero": {
                 "image": "/images/products/kids/kids.jpg",
                 "header": "Gifts for Kids",
@@ -98,7 +101,10 @@
             ]
         },
         "gifts-for-her":{
-            "index": 0,
+            "pagination": {
+                "index": 0,
+                "title": "Gifts\nfor Her"
+            },
             "hero": {
                 "image": "/images/products/her/her.jpg",
                 "header": "Gifts for Her",
@@ -135,7 +141,10 @@
         },
 
         "gifts-for-the-adventurer": {
-            "index": 3,
+            "pagination": {
+                "index": 3,
+                "title": "Gifts for the\nAdventurer"
+            },
             "hero": {
                 "image": "/images/products/adventurer/adventurer.jpg",
                 "header": "Gifts for the Adventurer",
@@ -170,7 +179,10 @@
         ]
     },
         "gifts-for-the-home-athlete": {
-            "index": 5,
+            "pagination": {
+                "index": 5,
+                "title": "Gifts for the\nHome Athlete"
+            },
             "hero": {
                 "image": "/images/products/athlete/athlete.jpg",
                 "header": "Gifts for the Home Athlete",
@@ -205,10 +217,13 @@
             ]
         },
         "gifts-for-the-fan": {
-            "index": 1,
+            "pagination": {
+                "index": 1,
+                "title": "Gifts for\nthe Fan"
+            },
             "hero": {
                 "image": "/images/products/fan/fan.jpg",
-                "header": "Gifts for Fan",
+                "header": "Gifts for the Fan",
                 "text": "Perfect picks for the fan who lives for sports"
             },
             "products": [
@@ -240,7 +255,10 @@
             ]
         },
         "gifts-for-warmth": {
-            "index": 7,
+            "pagination": {
+                "index": 7,
+                "title": "Gifts for\nWarmth"
+            },
             "hero": {
                 "image": "/images/products/warmth/warmth.jpg",
                 "header": "Gifts for Warmth",
@@ -275,7 +293,10 @@
             ]
         },
         "gifts-for-him": {
-            "index": 2,
+            "pagination": {
+                "index": 2,
+                "title": "Gifts\nfor Him"
+            },
             "hero": {
                 "image": "/images/products/him/him.jpg",
                 "header": "Gifts for Him",
@@ -310,7 +331,10 @@
             ]
         },
         "gifts-for-the-hill": {
-            "index": 6,
+            "pagination": {
+                "index": 6,
+                "title": "Gifts for\nthe Hill"
+            },
             "hero":{
                 "image": "/images/products/hill/hill.jpg",
                 "header": "Gifts for the Hill",

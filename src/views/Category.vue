@@ -30,11 +30,11 @@
         <div class="pagination">
             <router-link class="category prev" :to="`/category/${ prevCategory[0][0] }`">
                 <Chevron mirrored />
-                <span>{{ prevCategory[0][1].hero.header }}</span>
+                <span>{{ prevCategory[0][1].pagination.title }}</span>
             </router-link>
             <router-link class="home" to="/"><Home /></router-link>
             <router-link class="category next" :to="`/category/${ nextCategory[0][0] }`">
-                <span>{{ nextCategory[0][1].hero.header }}</span>
+                <span>{{ nextCategory[0][1].pagination.title }}</span>
                 <Chevron />
             </router-link>
         </div>
@@ -55,7 +55,7 @@
         },
         data() {
             return {
-                index: this.$t(`categories.${ this.$route.params.id }`).index,
+                index: this.$t(`categories.${ this.$route.params.id }.pagination`).index,
                 categories: this.$t('categories'),
             }
         },
@@ -71,7 +71,7 @@
                 let prevIndex = this.index - 1;
                 if (prevIndex < 0) prevIndex = (Object.keys(this.categories).length - 1);
 
-                return Object.entries(this.categories).filter(category => category[1].index === prevIndex);
+                return Object.entries(this.categories).filter(category => category[1].pagination.index === prevIndex);
 
             },
             nextCategory() {
@@ -79,13 +79,13 @@
                 let nextIndex = this.index + 1;
                 if (nextIndex >= Object.keys(this.categories).length) nextIndex = 0;
 
-                return Object.entries(this.categories).filter(category => category[1].index === nextIndex);
+                return Object.entries(this.categories).filter(category => category[1].pagination.index === nextIndex);
 
             }
         },
         watch: {
             $route(to, _) {
-                this.index = this.$t(`categories.${ to.params.id }`).index;
+                this.index = this.$t(`categories.${ to.params.id }.pagination`).index;
             }
         }
     }
@@ -115,6 +115,20 @@
         font-size: 18px;
         color: color(White);
 
+        @include mobile-less {
+            font-size: 16px;
+            padding: 0 25px;
+        }
+
+        @media (max-width: 600px) {
+
+            font-size: 14px;
+
+            height: auto;
+            padding: 20px 25px;
+
+        }
+
     }
 
     div.pagination a {
@@ -127,15 +141,47 @@
     }
 
     div.pagination a.category {
+
         color: color(White);
+        line-height: 1.2;
+        white-space: nowrap;
+
+        @media (max-width: 600px) {
+            white-space: pre;
+        }
+
+    }
+
+    div.pagination a.category.prev {
+        @media (max-width: 600px) {
+            text-align: left;
+        }
+    }
+
+    div.pagination a.category.next {
+        @media (max-width: 600px) {
+            text-align: right;
+        }
     }
 
     div.pagination a.category.prev svg {
+
         margin-right: 20px;
+
+        @include mobile-less {
+            margin-right: 15px;
+        }
+
     }
 
     div.pagination a.category.next svg {
+
         margin-left: 20px;
+
+        @include mobile-less {
+            margin-left: 15px;
+        }
+
     }
 
     div.pagination a.home {
