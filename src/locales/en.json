@@ -67,7 +67,7 @@
                 "title": "Gifts\nfor Kids"
             },
             "hero": {
-                "image": "/images/products/kids/kids.jpg",
+                "image": "/images/products/kids/hero.jpg",
                 "header": {
                     "line1": "Gifts for\n",
                     "line2": "Kids",
@@ -109,7 +109,7 @@
                 "title": "Gifts\nfor Her"
             },
             "hero": {
-                "image": "/images/products/her/her.jpg",
+                "image": "/images/products/her/hero.jpg",
                 "header": {
                     "line1": "Gifts for\n",
                     "line2": "Her",
@@ -151,7 +151,7 @@
                 "title": "Gifts for the\nAdventurer"
             },
             "hero": {
-                "image": "/images/products/adventurer/adventurer.jpg",
+                "image": "/images/products/adventurer/hero.jpg",
                 "header": {
                     "line1": "Gifts for the\n",
                     "line2": "Adventurer",
@@ -193,7 +193,7 @@
                 "title": "Gifts for the\nHome Athlete"
             },
             "hero": {
-                "image": "/images/products/athlete/athlete.jpg",
+                "image": "/images/products/athlete/hero.jpg",
                 "header": {
                     "line1": "Gifts for the\n",
                     "line2": "Home Athlete",
@@ -235,7 +235,7 @@
                 "title": "Gifts for\nthe Fan"
             },
             "hero": {
-                "image": "/images/products/fan/fan.jpg",
+                "image": "/images/products/fan/hero.jpg",
                 "header": {
                     "line1": "Gifts for the\n",
                     "line2": "Fan",
@@ -277,7 +277,7 @@
                 "title": "Gifts for\nWarmth"
             },
             "hero": {
-                "image": "/images/products/warmth/warmth.jpg",
+                "image": "/images/products/warmth/hero.jpg",
                 "header": {
                     "line1": "Gifts for\n",
                     "line2": "Warmth",
@@ -319,7 +319,7 @@
                 "title": "Gifts\nfor Him"
             },
             "hero": {
-                "image": "/images/products/him/him.jpg",
+                "image": "/images/products/him/hero.jpg",
                 "header": {
                     "line1": "Gifts for\n",
                     "line2": "Him",
@@ -361,7 +361,7 @@
                 "title": "Gifts for\nthe Hill"
             },
             "hero":{
-                "image": "/images/products/hill/hill.jpg",
+                "image": "/images/products/hill/hero.jpg",
                 "header": {
                     "line1": "Gifts for the\n",
                     "line2": "Hill",
