@@ -250,11 +250,7 @@
     }
 
     div.categories div.row.two {
-
         margin-top: 40px;
-
-
-
     }
 
     a.category {
@@ -267,6 +263,7 @@
 
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
 
         overflow: hidden;
 

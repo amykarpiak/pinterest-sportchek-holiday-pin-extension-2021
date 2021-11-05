@@ -60,7 +60,6 @@
             ]
         }
     },
-
     "categories": {
         "gifts-for-kids": {
             "pagination": {
@@ -69,8 +68,12 @@
             },
             "hero": {
                 "image": "/images/products/kids/kids.jpg",
-                "header": "Gifts for Kids",
-                "text": "Tap below to explore gift ideas to keep you moving all season"
+                "header": {
+                    "line1": "Gifts for\n",
+                    "line2": "Kids",
+                    "shrink": false
+                },
+                "subtitle": "Tap below to explore gift ideas to keep you moving all season"
             },
             "products": [
                 {
@@ -107,10 +110,13 @@
             },
             "hero": {
                 "image": "/images/products/her/her.jpg",
-                "header": "Gifts for Her",
-                "text": "Check everything off her list this season"
+                "header": {
+                    "line1": "Gifts for\n",
+                    "line2": "Her",
+                    "shrink": false
                 },
-
+                "subtitle": "Check everything off her list this season"
+            },
             "products": [
                 {
                     "image": "/images/products/her/NikeWomensAirMax90_365Shoes.png",
@@ -139,7 +145,6 @@
                 }
             ]
         },
-
         "gifts-for-the-adventurer": {
             "pagination": {
                 "index": 3,
@@ -147,8 +152,12 @@
             },
             "hero": {
                 "image": "/images/products/adventurer/adventurer.jpg",
-                "header": "Gifts for the Adventurer",
-                "text": "Get them covered with gear and accessories for everything outdoors"
+                "header": {
+                    "line1": "Gifts for the\n",
+                    "line2": "Adventurer",
+                    "shrink": true
+                },
+                "subtitle": "Get them covered with gear and accessories for everything outdoors"
             },
             "products": [
             {
@@ -185,8 +194,12 @@
             },
             "hero": {
                 "image": "/images/products/athlete/athlete.jpg",
-                "header": "Gifts for the Home Athlete",
-                "text": "Get them covered with all the gear they need to maximize their home workout"
+                "header": {
+                    "line1": "Gifts for the\n",
+                    "line2": "Home Athlete",
+                    "shrink": true
+                },
+                "subtitle": "Get them covered with all the gear they need to maximize their home workout"
             },
             "products": [
                 {
@@ -223,8 +236,12 @@
             },
             "hero": {
                 "image": "/images/products/fan/fan.jpg",
-                "header": "Gifts for the Fan",
-                "text": "Perfect picks for the fan who lives for sports"
+                "header": {
+                    "line1": "Gifts for the\n",
+                    "line2": "Fan",
+                    "shrink": false
+                },
+                "subtitle": "Perfect picks for the fan who lives for sports"
             },
             "products": [
                 {
@@ -261,8 +278,12 @@
             },
             "hero": {
                 "image": "/images/products/warmth/warmth.jpg",
-                "header": "Gifts for Warmth",
-                "text": "Lightweight layers and gear to ease into the season"
+                "header": {
+                    "line1": "Gifts for\n",
+                    "line2": "Warmth",
+                    "shrink": false
+                },
+                "subtitle": "Lightweight layers and gear to ease into the season"
             },
             "products": [
                 {
@@ -299,8 +320,12 @@
             },
             "hero": {
                 "image": "/images/products/him/him.jpg",
-                "header": "Gifts for Him",
-                "text": "The latest apparel, footwear and more from the best brands"
+                "header": {
+                    "line1": "Gifts for\n",
+                    "line2": "Him",
+                    "shrink": false
+                },
+                "subtitle": "The latest apparel, footwear and more from the best brands"
             },
             "products": [
                 {
@@ -337,8 +362,12 @@
             },
             "hero":{
                 "image": "/images/products/hill/hill.jpg",
-                "header": "Gifts for the Hill",
-                "text": "Equipment to take it to the slopes in style"
+                "header": {
+                    "line1": "Gifts for the\n",
+                    "line2": "Hill",
+                    "shrink": false
+                },
+                "subtitle": "Equipment to take it to the slopes in style"
             },
             "products": [
                 {

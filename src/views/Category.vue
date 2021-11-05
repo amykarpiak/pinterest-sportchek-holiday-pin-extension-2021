@@ -1,57 +1,48 @@
 <template>
     <section id="Category">
-        <div class="hero" :style="{ backgroundImage: `url('${hero.image}')` }">
-            <div id="headerIcon">
-                <router-link to="/"><img :src="'/img/logo.png'" id="logo"></router-link>
-            </div>
-            <h1>{{ hero.header }}</h1>
-            <h3>{{ hero.text }}</h3>
-            <div id="headerIcon">
-                <img :src="'/img/frame.png'" id="frame">
+        <div class="hero">
+            <div class="bg" :style="{ backgroundImage: `url(${ data.hero.image })` }"></div>
+            <router-link to="/"><img class="logo" src="/images/logo.svg" alt="SportChek"></router-link>
+            <div class="content">
+                <h1 :class="{ shrink: data.hero.header.shrink }">
+                    <span class="small">{{ data.hero.header.line1 }}</span>
+                    <span>{{ data.hero.header.line2 }}</span>
+                </h1>
+                <h2>{{ data.hero.subtitle }}</h2>
+                <img class="logo-alt" src="/images/logo-alt.svg" alt="">
             </div>
         </div>
-        <div class="wrapper">
-            <div class="productListing">
-                <div class="products">
-                    <div class="product" v-for="product in products" :key="product.title">
-                        <a :href="product.link" target="_blank">
-                        <img :src="product.image" alt="image of product" class="productImage">
-                        <h4>{{ product.title }}</h4>
-                        <span><img :src="'/img/frameBlack.png'" class="frameBlack">Tap to Shop</span>
-                        </a>
-                    </div>
+        <div class="products">
+            <a
+                class="product"
+                v-for="product in data.products"
+                :key="product.title"
+                :href="product.link"
+                target="_blank"
+            >
+                <div>
+                    <img class="product-image" :src="product.image" alt="">
+                    <h3>{{ product.title }}</h3>
                 </div>
-            </div>
+                <span class="link-out">
+                    <img src="/images/logo-alt-black.svg" alt="">
+                    Tap to shop
+                </span>
+            </a>
         </div>
-        <div class="presents">
-            <img :src="'/img/leftPresentsCategory.png'" class="leftPresent">
-            <img :src="'/img/rightPresentCategory.png'" class="rightPresent">
-        </div>
-        <div class="pagination">
-            <router-link class="category prev" :to="`/category/${ prevCategory[0][0] }`">
-                <Chevron mirrored />
-                <span>{{ prevCategory[0][1].pagination.title }}</span>
-            </router-link>
-            <router-link class="home" to="/"><Home /></router-link>
-            <router-link class="category next" :to="`/category/${ nextCategory[0][0] }`">
-                <span>{{ nextCategory[0][1].pagination.title }}</span>
-                <Chevron />
-            </router-link>
-        </div>
+        <Pagination :prevCategory="prevCategory" :nextCategory="nextCategory" />
     </section>
 </template>
 
 <script>
 
     // Components.
-    import Home from '@/components/icons/Home';
-    import Chevron from '@/components/icons/Chevron';
+    import Pagination from '@/components/Pagination';
 
     export default {
         name: 'Category',
         components: {
-            Home,
-            Chevron,
+            Pagination,
         },
         data() {
             return {
@@ -60,11 +51,8 @@
             }
         },
         computed: {
-            products() {
-                return this.$t(`categories.${ this.$route.params.id }.products`);
-            },
-            hero() {
-                return this.$t(`categories.${ this.$route.params.id }.hero`);
+            data() {
+                return this.$t(`categories.${ this.$route.params.id }`);
             },
             prevCategory() {
 
@@ -97,363 +85,286 @@
     @import '../styles/_variables.scss';
     @import '../styles/_mediaqueries.scss';
 
-    div.pagination {
+    #Category {
 
         position: relative;
+        min-height: calc(100vh - 60px);
+
+        background: color(PrimaryRed);
+
+    }
+
+    #Category,
+    div.hero div.bg {
+        box-shadow: inset 0px 70px 230px color(Black, 0.42);
+    }
+
+    div.hero {
+
+        position: relative;
+        z-index: 5;
+
+        padding: 50px 25px 150px;
+
+        text-align: center;
+        color: color(White);
+
+        @include phone {
+            padding: 50px 15px;
+        }
+
+    }
+
+    div.hero div.bg,
+    div.hero div.bg:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    div.hero div.bg {
+
+        background-size: cover;
+        background-position: center;
+
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+
+    }
+
+    div.hero div.bg:after {
+        content: '';
+        background: linear-gradient(to top, color(Black, 0.3) 40%, transparent);
+    }
+
+    div.hero div.content {
+        @include phone {
+            position: relative;
+            top: 200px;
+        }
+    }
+
+    div.hero img.logo,
+    div.hero img.logo-alt,
+    div.hero h1,
+    div.hero h2 {
+        position: relative;
+        z-index: 5;
+    }
+
+    div.hero img.logo {
+
+        width: 170px;
+
+        @include phone {
+            width: 40%;
+        }
+
+    }
+
+    div.hero h1,
+    div.hero h2 {
+        font-family: 'Bagnard', serif;
+    }
+
+    div.hero h1 {
+
+        font-size: 70px;
+        line-height: 1.1;
+
+        margin: 40px 0 30px;
+
+    }
+
+    div.hero h1.shrink {
+
+        @media (max-width: 600px) {
+            font-size: 50px;
+        }
+
+        @include phone {
+            font-size: 40px;
+        }
+
+    }
+
+    div.hero h1 span {
+        @include mobile-less {
+            display: block;
+        }
+    }
+
+    div.hero h1 span.small {
+
+        @include mobile-less {
+            font-size: 75%;
+        }
+
+        @media (max-width: 600px) {
+            font-size: 50%;
+        }
+
+    }
+
+    div.hero h2 {
+
+        font-size: 25px;
+        line-height: 1.25;
+
+        margin-bottom: 30px;
+
+        @include tablet-less {
+            font-size: 20px;
+        }
+
+        @include phone {
+            font-size: 18px;
+        }
+
+    }
+
+    div.hero img.logo-alt {
+
+        width: 80px;
+        transform: translateX(15%);
+
+        @include phone {
+            width: 60px;
+        }
+
+    }
+
+    div.products {
+
+        position: relative;
+        z-index: 5;
 
         width: 100%;
-        height: 60px;
-        padding: 0 50px;
-
-        background-color: color(SecondaryRed);
+        padding: 0 50px 100px;
+        max-width: 800px;
+        margin: -75px auto 0;
 
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        font-family: 'Good Office Pro Bold', sans-serif;
-        font-size: 18px;
-        color: color(White);
+        flex-wrap: wrap;
 
         @include mobile-less {
-            font-size: 16px;
-            padding: 0 25px;
+            padding: 0 40px 100px;
         }
 
         @media (max-width: 600px) {
+            padding: 0 20px 250px;
+        }
 
-            font-size: 14px;
-
-            height: auto;
-            padding: 20px 25px;
-
+        @include phone {
+            padding: 0 15px 200px;
+            margin: 200px auto 0;
         }
 
     }
 
-    div.pagination a {
+    a.product {
 
+        width: calc((100% / 3) - 20px);
+        margin-right: 30px;
+        margin-bottom: 60px;
+
+        background-color: color(White);
+        border: 4px solid color(White);
+        border-radius: 20px;
+
+        box-shadow: 0 10px 15px color(Black, 0.1);
+
+        color: color(Black);
         text-decoration: none;
+        text-align: center;
 
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
 
-    }
-
-    div.pagination a.category {
-
-        color: color(White);
-        line-height: 1.2;
-        white-space: nowrap;
-
-        @media (max-width: 600px) {
-            white-space: pre;
-        }
-
-    }
-
-    div.pagination a.category.prev {
-        @media (max-width: 600px) {
-            text-align: left;
-        }
-    }
-
-    div.pagination a.category.next {
-        @media (max-width: 600px) {
-            text-align: right;
-        }
-    }
-
-    div.pagination a.category.prev svg {
-
-        margin-right: 20px;
+        transition: border-color 250ms ease;
 
         @include mobile-less {
+            width: calc(50% - 20px);
+            margin-right: 40px;
+        }
+
+        @media (max-width: 600px) {
+            width: calc(50% - 10px);
+            margin-right: 20px;
+            margin-bottom: 40px;
+        }
+
+        @include phone {
+            width: calc(50% - 7.5px);
             margin-right: 15px;
         }
 
     }
 
-    div.pagination a.category.next svg {
+    a.product:hover {
+        border-color: color(SecondaryRed);
+    }
 
-        margin-left: 20px;
+    a.product:nth-of-type(3n) {
+        @media (min-width: 768px) {
+            margin-right: 0;
+        }
+    }
 
+    a.product:nth-of-type(even) {
         @include mobile-less {
-            margin-left: 15px;
+            margin-right: 0;
+        }
+    }
+
+    a.product img.product-image {
+        width: 100%;
+        margin-top: -18%;
+    }
+
+    a.product h3 {
+
+        font-family: 'Good Office Pro', sans-serif;
+        font-size: 16px;
+        line-height: 1.2;
+
+        margin-top: -10px;
+        padding: 0 15px;
+
+        @include phone {
+            padding: 0 10px;
         }
 
     }
 
-    div.pagination a.home {
+    a.product span.link-out {
 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        transform: translateX(-50%) translateY(-50%);
-
-        width: 40px;
-        height: 40px;
-
-        border-radius: 50%;
-
-        justify-content: center;
-
-        // transition: background-color 250ms ease;
-
-    }
-
-    div.pagination a.home:hover {
-        // background-color: color(White);
-    }
-
-    /**********/
-    /**********/
-    /**********/
-
-
-    #Category{
-        background: #E72020;
-        box-shadow: inset 0px 70px 230px rgba(0, 0, 0, 0.42);
-    }
-
-    h1{
-        margin-top: 100px;
-        font-family: 'Bagnard', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 70px;
-        line-height: 70px;
-        text-align: center;
-        color: #FFFFFF;
-        text-shadow: 0px 4px 14px rgba(11, 11, 11, 0.25);
-    }
-
-    h3{
-        margin-top: 40px;
-        font-family: 'Bagnard', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 25px;
-        line-height: 35px;
-        text-align: center;
-        color: #FFFFFF;
-        text-shadow: 0px 4px 14px rgba(11, 11, 11, 0.25);
-    }
-
-    h4{
-        font-family: Good Offc Pro;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        text-align: center;
-        margin: 5px;
-    }
-
-    .hero{
-        height: 600px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
-        box-shadow: inset 0px 70px 230px rgba(0, 0, 0, 0.42);
-    }
-
-    #headerIcon{
-        padding-top: 50px;
-    }
-
-    .productListing{
         display: flex;
-        justify-content: center;
-        padding: 30px;
-    }
+        align-items: center;
 
-    .products {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        width: 700px;
-        margin-top: -100px;
-        position: relative;
-    }
-
-    .product {
-        width: 200px;
-        height: 300px;
-        margin-right: 50px;
-        margin-bottom: 50px;
-        background-color: color(White);
-        border-radius: 20px;
-        box-shadow: 0 15px 15px color(Black, 0.05);
-    }
-
-    .product span{
-        font-family: Good Offc Pro;
-        font-style: normal;
-        font-weight: bold;
+        font-family: 'Good Office Pro Bold', sans-serif;
         font-size: 18px;
-        line-height: 22px;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
+
+        margin-top: 60px;
+        padding: 15px;
+
+        @include phone {
+
+            padding: 10px;
+            margin-top: 40px;
+
+            font-size: 16px;
+
+        }
+
     }
 
-    .product:nth-child(3n) {
-        margin-right: 0;
-    }
-
-    .product .productImage{
-        height: 230px;
-        margin-top: -50px;
-    }
-
-    .product a{
-        text-decoration: none;
-        color: black;
-    }
-
-    .frameBlack{
-        width: 40px;
-        height: 20px;
-        margin-right: 10px;
-    }
-
-    .presents{
-        position: relative;
-    }
-
-    .leftPresent {
-        width: 15%;
-        bottom: -44%;
-        left: 0%;
-        position: absolute;
-        z-index: 0;
-    }
-
-    .rightPresent {
-        width: 20%;
-        bottom: -44%;
-        right: 0%;
-        position: absolute;
-        z-index: 0;
-    }
-
-    svg:hover path{
-        fill: #E72020;
-        padding: 0px;
-    }
-
-    i{
-        width: 20px;
-    }
-
-@media only screen and (max-width: 950px) {
-    #Category{
-        background: #E72020;
-        box-shadow: inset 0px 70px 230px rgba(0, 0, 0, 0.42);
-    }
-
-    h1{
-        margin-top: 100px;
-    }
-
-    h3{
-        margin-top: 40px;
-    }
-
-    h4{
-        font-family: Good Offc Pro;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        text-align: center;
-    }
-
-    .hero{
-        height: 650px;
-        background-image: url("/img/giftsforkids.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
-        box-shadow: inset 0px 70px 230px rgba(0, 0, 0, 0.42);
-        position: relative;
-    }
-
-    #headerIcon{
-        padding-top: 50px;
-    }
-
-    .productListing{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 200px;
-        margin-top: 100px;
-    }
-
-    .products {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        justify-content: space-around;
-    }
-
-    .product {
-        width: 200px;
-        height: 300px;
-        margin: 5px;
-        margin-bottom: 30px;
-        background-color: color(White);
-        border-radius: 20px;
-        box-shadow: 0 15px 15px color(Black, 0.05);
-    }
-
-    .product span{
-        font-family: Good Offc Pro;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .product:nth-child(3n) {
-        margin: 5px;
-    }
-
-    .frameBlack{
-        width: 40px;
-        height: 20px;
+    a.product span.link-out img {
+        height: 16px;
         margin-right: 5px;
     }
-
-    .presents{
-        position: relative;
-        z-index: 0;
-    }
-
-    .leftPresent {
-        width: 160px;
-        bottom: -60%;
-        left: 0%;
-        position: absolute;
-        z-index: 0;
-    }
-
-    .rightPresent {
-        width: 200px;
-        bottom: 0%;
-        right: 0%;
-        position: absolute;
-        z-index: 0;
-    }
-
-}
-
 
 </style>
