@@ -14,7 +14,7 @@
             <div class="productListing">
                 <div class="products">
                     <div class="product" v-for="product in products" :key="product.title">
-                        <a :href="product.link">
+                        <a :href="product.link" target="_blank">
                         <img :src="product.image" alt="image of product" class="productImage">
                         <h4>{{ product.title }}</h4>
                         <span><img :src="'/img/frameBlack.png'" class="frameBlack">Tap to Shop</span>

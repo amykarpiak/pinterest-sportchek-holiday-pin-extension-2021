@@ -197,8 +197,14 @@
     }
 
     div.masthead img.logo-alt {
+
         width: 80px;
         transform: translateX(15%);
+
+        @include phone {
+            width: 60px;
+        }
+
     }
 
     div.categories {
