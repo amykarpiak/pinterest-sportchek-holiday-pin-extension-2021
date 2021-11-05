@@ -101,12 +101,16 @@
         background-image: url('/images/home-bg.png');
         background-size: 100% 100%;
 
-        padding: 50px 0 150px;
+        padding: 50px 25px 150px;
 
         text-align: center;
 
         @include mobile-less {
             background-image: url('/images/home-bg-mobile.png');
+        }
+
+        @include phone {
+            padding: 50px 15px 150px;
         }
 
     }
@@ -184,7 +188,6 @@
         line-height: 1.25;
 
         margin-bottom: 30px;
-        padding: 0 25px;
 
         @include tablet-less {
             font-size: 20px;
