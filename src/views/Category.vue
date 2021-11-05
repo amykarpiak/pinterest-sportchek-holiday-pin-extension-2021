@@ -2,7 +2,7 @@
     <section id="Category">
         <div class="hero" :style="{ backgroundImage: `url('${hero.image}')` }">
             <div id="headerIcon">
-                <img :src="'/img/logo.png'" id="logo">
+                <router-link to="/"><img :src="'/img/logo.png'" id="logo"></router-link>
             </div>
             <h1>{{ hero.header }}</h1>
             <h3>{{ hero.text }}</h3>
@@ -27,17 +27,15 @@
             <img :src="'/img/leftPresentsCategory.png'" class="leftPresent">
             <img :src="'/img/rightPresentCategory.png'" class="rightPresent">
         </div>
-        <div class="secondaryNav">
-            <router-link :to="`/category/${ prevCategory[0][0] }`">
-                <p>{{ prevCategory[0][1].hero.header }}</p>
+        <div class="pagination">
+            <router-link class="category prev" :to="`/category/${ prevCategory[0][0] }`">
+                <Chevron mirrored />
+                <span>{{ prevCategory[0][1].hero.header }}</span>
             </router-link>
-            <router-link to="/">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M29.3273 19.2191C29.7585 19.5642 29.8285 20.1934 29.4834 20.6247C29.1384 21.056 28.5091 21.1259 28.0779 20.7809L26.2212 19.2955V26.962C26.2212 27.5143 25.7735 27.962 25.2212 27.962H14.7781C14.2258 27.962 13.7781 27.5143 13.7781 26.962V19.2961L11.9222 20.7809C11.4909 21.1259 10.8616 21.056 10.5166 20.6247C10.1716 20.1934 10.2415 19.5642 10.6728 19.2191L19.3753 12.2571C19.7405 11.9649 20.2595 11.9649 20.6247 12.2571L29.3273 19.2191ZM15.7781 17.6961V25.962H24.2212V17.6955L20 14.3186L15.7781 17.6961Z" fill="white"/>
-                </svg>
-            </router-link>
-            <router-link :to="`/category/${ nextCategory[0][0] }`">
-                <p>{{ nextCategory[0][1].hero.header }}</p>
+            <router-link class="home" to="/"><Home /></router-link>
+            <router-link class="category next" :to="`/category/${ nextCategory[0][0] }`">
+                <span>{{ nextCategory[0][1].hero.header }}</span>
+                <Chevron />
             </router-link>
         </div>
     </section>
@@ -45,44 +43,52 @@
 
 <script>
 
-export default {
-    name: 'Category',
-    data() {
-        return {
-            index: this.$t(`categories.${ this.$route.params.id }`).index,
-            categories: this.$t('categories'),
-        }
-    },
-    computed: {
-        products() {
-            return this.$t(`categories.${ this.$route.params.id }.products`);
+    // Components.
+    import Home from '@/components/icons/Home';
+    import Chevron from '@/components/icons/Chevron';
+
+    export default {
+        name: 'Category',
+        components: {
+            Home,
+            Chevron,
         },
-        hero() {
-            return this.$t(`categories.${ this.$route.params.id }.hero`);
+        data() {
+            return {
+                index: this.$t(`categories.${ this.$route.params.id }`).index,
+                categories: this.$t('categories'),
+            }
         },
-        prevCategory() {
+        computed: {
+            products() {
+                return this.$t(`categories.${ this.$route.params.id }.products`);
+            },
+            hero() {
+                return this.$t(`categories.${ this.$route.params.id }.hero`);
+            },
+            prevCategory() {
 
-            let prevIndex = this.index - 1;
-            if (prevIndex < 0) prevIndex = (Object.keys(this.categories).length - 1);
+                let prevIndex = this.index - 1;
+                if (prevIndex < 0) prevIndex = (Object.keys(this.categories).length - 1);
 
-            return Object.entries(this.categories).filter(category => category[1].index === prevIndex);
+                return Object.entries(this.categories).filter(category => category[1].index === prevIndex);
 
+            },
+            nextCategory() {
+
+                let nextIndex = this.index + 1;
+                if (nextIndex >= Object.keys(this.categories).length) nextIndex = 0;
+
+                return Object.entries(this.categories).filter(category => category[1].index === nextIndex);
+
+            }
         },
-        nextCategory() {
-
-            let nextIndex = this.index + 1;
-            if (nextIndex >= Object.keys(this.categories).length) nextIndex = 0;
-
-            return Object.entries(this.categories).filter(category => category[1].index === nextIndex);
-
-        }
-    },
-    watch: {
-        $route(to, from) {
-            this.index = this.$t(`categories.${ to.params.id }`).index;
+        watch: {
+            $route(to, _) {
+                this.index = this.$t(`categories.${ to.params.id }`).index;
+            }
         }
     }
-}
 
 </script>
 
@@ -90,6 +96,74 @@ export default {
 
     @import '../styles/_variables.scss';
     @import '../styles/_mediaqueries.scss';
+
+    div.pagination {
+
+        position: relative;
+
+        width: 100%;
+        height: 60px;
+        padding: 0 50px;
+
+        background-color: color(SecondaryRed);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-family: 'Good Office Pro Bold', sans-serif;
+        font-size: 18px;
+        color: color(White);
+
+    }
+
+    div.pagination a {
+
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+
+    }
+
+    div.pagination a.category {
+        color: color(White);
+    }
+
+    div.pagination a.category.prev svg {
+        margin-right: 20px;
+    }
+
+    div.pagination a.category.next svg {
+        margin-left: 20px;
+    }
+
+    div.pagination a.home {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translateX(-50%) translateY(-50%);
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+
+        justify-content: center;
+
+        // transition: background-color 250ms ease;
+
+    }
+
+    div.pagination a.home:hover {
+        // background-color: color(White);
+    }
+
+    /**********/
+    /**********/
+    /**********/
 
 
     #Category{
@@ -220,40 +294,6 @@ export default {
         z-index: 0;
     }
 
-    .secondaryNav{
-        color: white;
-        background: #F0423D;
-        font-family: Good Offc Pro;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
-        padding: 5px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .secondaryNav img{
-        height: 20px;
-    }
-
-    .secondaryNav a{
-        text-decoration: none;
-        color: white;
-        display: inline-block;
-        margin: 0px 100px;
-        padding: 5px;
-    }
-
-    .secondaryNav a:hover{
-        background: white;
-        color: #E72020;
-        border-radius: 60px;
-        padding: 5px;
-
-    }
-
     svg:hover path{
         fill: #E72020;
         padding: 0px;
@@ -367,38 +407,6 @@ export default {
         z-index: 0;
     }
 
-    .secondaryNav{
-        color: white;
-        background: #F0423D;
-        font-family: Good Offc Pro;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 22px;
-        padding: 5px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .secondaryNav img{
-        height: 20px;
-    }
-
-    .secondaryNav a{
-        text-decoration: none;
-        color: white;
-        display: inline-block;
-        margin: 0px 20px;
-        padding: 5px;
-    }
-
-    .secondaryNav a:hover{
-        background: white;
-        color: red;
-        border-radius: 20px;
-        padding: 5px;
-
-    }
 }
 
 

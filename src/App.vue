@@ -34,7 +34,7 @@
         height: 60px;
         padding: 0 50px;
 
-        background-color: color(Red);
+        background-color: color(PrimaryRed);
 
         display: flex;
         align-items: center;

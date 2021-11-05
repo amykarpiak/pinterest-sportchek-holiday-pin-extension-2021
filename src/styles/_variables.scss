@@ -1,7 +1,8 @@
 $color: (
     White: #ffffff,
     Black: #000000,
-    Red: #E72020,
+    PrimaryRed: #E72020,
+    SecondaryRed: #F0423D,
 );
 
 @function color($key, $alpha: 1) {
