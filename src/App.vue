@@ -4,9 +4,9 @@
         <footer>
             <img src="/images/logo.svg" alt="SportChek">
             <span>
-                <a href="https://sportchek.ca" target="_blank">Privacy Policy</a>
+                <a :href="$t('misc.legal.privacy_policy_link')" target="_blank">{{ $t('misc.legal.privacy_policy') }}</a>
                 <span> • </span>
-                <a href="https://sportchek.ca" target="_blank">Terms of Service</a>
+                <a :href="$t('misc.legal.terms_and_conditions_link')" target="_blank">{{ $t('misc.legal.terms_and_conditions') }}</a>
             </span>
         </footer>
     </div>
@@ -73,6 +73,10 @@
     footer a {
         color: color(White);
         text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
     }
 
 </style>

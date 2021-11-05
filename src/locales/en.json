@@ -407,5 +407,13 @@
                 }
             ]
         }
+    },
+    "misc": {
+        "legal": {
+            "privacy_policy": "Privacy Policy",
+            "privacy_policy_link": "https://www.sportchek.ca/help-desk/safety-and-security/privacy-policy.html",
+            "terms_and_conditions": "Terms & Conditions",
+            "terms_and_conditions_link": "https://www.sportchek.ca/help-desk/safety-and-security/terms-and-conditions.html"
+        }
     }
 }
