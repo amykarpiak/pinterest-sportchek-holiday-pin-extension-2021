@@ -68,6 +68,7 @@
             },
             "hero": {
                 "image": "/images/products/kids/hero.jpg",
+                "responsive_image": "/images/products/kids/responsive.jpg",
                 "header": {
                     "line1": "Gifts for\n",
                     "line2": "Kids",
@@ -110,6 +111,7 @@
             },
             "hero": {
                 "image": "/images/products/her/hero.jpg",
+                "responsive_image": "/images/products/her/responsive.jpg",
                 "header": {
                     "line1": "Gifts for\n",
                     "line2": "Her",
@@ -152,6 +154,7 @@
             },
             "hero": {
                 "image": "/images/products/adventurer/hero.jpg",
+                "responsive_image": "/images/products/adventurer/responsive.jpg",
                 "header": {
                     "line1": "Gifts for the\n",
                     "line2": "Adventurer",
@@ -194,6 +197,7 @@
             },
             "hero": {
                 "image": "/images/products/athlete/hero.jpg",
+                "responsive_image": "/images/products/athlete/responsive.jpg",
                 "header": {
                     "line1": "Gifts for the\n",
                     "line2": "Home Athlete",
@@ -236,6 +240,7 @@
             },
             "hero": {
                 "image": "/images/products/fan/hero.jpg",
+                "responsive_image": "/images/products/fan/responsive.jpg",
                 "header": {
                     "line1": "Gifts for the\n",
                     "line2": "Fan",
@@ -278,6 +283,7 @@
             },
             "hero": {
                 "image": "/images/products/warmth/hero.jpg",
+                "responsive_image": "/images/products/warmth/responsive.jpg",
                 "header": {
                     "line1": "Gifts for\n",
                     "line2": "Warmth",
@@ -320,6 +326,7 @@
             },
             "hero": {
                 "image": "/images/products/him/hero.jpg",
+                "responsive_image": "/images/products/him/responsive.jpg",
                 "header": {
                     "line1": "Gifts for\n",
                     "line2": "Him",
@@ -362,6 +369,7 @@
             },
             "hero":{
                 "image": "/images/products/hill/hero.jpg",
+                "responsive_image": "/images/products/hill/responsive.jpg",
                 "header": {
                     "line1": "Gifts for the\n",
                     "line2": "Hill",

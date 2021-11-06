@@ -10,8 +10,10 @@
             </h1>
             <h2>{{ $t('home.subtitle') }}</h2>
             <img class="logo-alt" src="/images/logo-alt.svg" alt="">
+            <Scroll />
         </div>
         <div class="categories">
+        <div id="anchorPoint"></div>
             <div class="row one">
                 <router-link
                     v-for="category in $t('home.categories.row1')"
@@ -44,8 +46,14 @@
 
 <script>
 
+    // Components
+    import Scroll from '@/components/icons/Scroll';
+
     export default {
         name: 'Home',
+        components: {
+            Scroll,
+        },
     }
 
 </script>

@@ -2,6 +2,7 @@
     <section id="Category">
         <div class="hero">
             <div class="bg" :style="{ backgroundImage: `url(${ data.hero.image })` }"></div>
+            <div class="bg-responsive" :style="{ backgroundImage: `url(${ data.hero.responsive_image })` }"></div>
             <router-link to="/"><img class="logo" src="/images/logo.svg" alt="SportChek"></router-link>
             <div class="content">
                 <h1 :class="{ shrink: data.hero.header.shrink }">
@@ -122,20 +123,88 @@
         right: 0;
         bottom: 0;
         left: 0;
+
+        display: block;
+        visibility: visible;
+
+        @include mobile-less {
+            display: none;
+            visibility: hidden;
+        }
     }
 
     div.hero div.bg {
 
         background-size: cover;
         background-position: center;
+        display: block;
+        visibility: visible;
 
         clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+        
+        @include mobile-less {
+            display: none;
+            visibility: hidden;
+        }
 
     }
 
     div.hero div.bg:after {
         content: '';
         background: linear-gradient(to top, color(Black, 0.3) 40%, transparent);
+
+        @include mobile-less {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    div.hero div.bg-responsive,
+    div.hero div.bg-responsive:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: none;
+        visibility: hidden;
+
+        @include mobile-less {
+            display: block;
+            visibility: visible;
+        }
+    }
+    
+    div.hero div.bg-responsive {
+
+        display: none;
+        visibility: hidden;
+        
+        @include mobile-less {
+            background-size: cover;
+            background-position: center;
+            display: block;
+            visibility: visible;
+
+            clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+
+        }
+
+    }
+
+    div.hero div.bg-responsive:after {
+        content: '';
+        background: linear-gradient(to top, color(Black, 0.3) 40%, transparent);
+        display: none;
+        visibility: hidden;
+
+        @include mobile-less {
+            content: '';
+            background: linear-gradient(to top, color(Black, 0.3) 40%, transparent);
+            display: block;
+            visibility: visible;
+        }
     }
 
     div.hero div.content {
