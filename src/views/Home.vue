@@ -354,11 +354,9 @@
 
         background-color: transparent;
         border-radius: 50%;
-
         transition: background-color 750ms ease;
 
         z-index: -1;
-
     }
 
     a.category.square:hover:before {
