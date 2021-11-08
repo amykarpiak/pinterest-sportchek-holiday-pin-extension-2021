@@ -143,7 +143,7 @@
     div.hero div.bg {
 
         background-size: cover;
-        background-position: 50% 30%;
+        background-position: 50% 25%;
         display: block;
         visibility: visible;
 
