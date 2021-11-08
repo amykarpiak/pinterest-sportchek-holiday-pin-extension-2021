@@ -27,14 +27,19 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes,
 
-    scrollBehavior: function (to) {
-        if (to.hash) {
-          return {
-            selector: to.hash,
-            behavior: 'smooth',
-          }
+    scrollBehavior (to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition
+      } else {
+        window.scrollTo(0, 0);
+      }
+      if (to.hash) {
+        return {
+          selector: to.hash,
+          behavior: 'smooth',
         }
-      },
+      }
+    },
 });
 
 export default router;
