@@ -28,7 +28,7 @@
     }
 
     a.product span.link-out svg.LogoAlt path{
-        transition: fill 750ms ease;
+        transition: fill 250ms ease;
     }
 
     a.product:hover span.link-out svg.LogoAlt path{
@@ -36,4 +36,3 @@
     }
 
 </style>
-

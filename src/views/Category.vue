@@ -317,7 +317,6 @@
         z-index: 5;
 
         width: 100%;
-        // padding: 0 50px 100px;
         padding: 0 50px;
         max-width: 800px;
         margin: -75px auto 0;
@@ -326,17 +325,14 @@
         flex-wrap: wrap;
 
         @include mobile-less {
-            // padding: 0 40px 100px;
             padding: 0 40px;
         }
 
         @media (max-width: 600px) {
-            // padding: 0 20px 250px;
             padding: 0 20px;
         }
 
         @include phone {
-            // padding: 0 15px 200px;
             padding: 0 15px;
             margin: 200px auto 0;
         }
@@ -345,12 +341,13 @@
 
     a.product {
 
+        position: relative;
+
         width: calc((100% / 3) - 20px);
         margin-right: 30px;
         margin-bottom: 60px;
 
         background-color: color(White);
-        border: 4px solid color(White);
         border-radius: 20px;
 
         box-shadow: 0 10px 15px color(Black, 0.1);
@@ -363,8 +360,6 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-
-        transition: border-color 750ms ease;
 
         @include mobile-less {
             width: calc(50% - 20px);
@@ -384,16 +379,33 @@
 
     }
 
-    a.product:hover img{
-        transform: scale(1.1);
+    a.product:before {
+
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+
+        transform: translateX(-50%) translateY(-50%);
+
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+
+        border-radius: 25px;
+        background-color: transparent;
+        transition: background-color 250ms ease;
+
     }
 
-    a.product:hover span.link-out{
-        color: color(SecondaryRed);
+    a.product:hover:before {
+        background-color: color(SecondaryRed);
     }
 
-    a.product:hover {
-        border-color: color(SecondaryRed);
+    a.product:hover span.link-out {
+        color: color(PrimaryRed);
     }
 
     a.product:nth-of-type(3n) {
@@ -409,10 +421,17 @@
     }
 
     a.product img.product-image {
+
         width: 100%;
         margin-top: -18%;
 
-        transition: transform 750ms ease;
+        transform-origin: center bottom;
+        transition: transform 250ms ease;
+
+    }
+
+    a.product:hover img.product-image {
+        transform: scale(1.05);
     }
 
     a.product h3 {
@@ -441,7 +460,7 @@
         margin-top: 60px;
         padding: 15px;
 
-        transition: color 750ms ease;
+        transition: color 250ms ease;
 
         @include phone {
 

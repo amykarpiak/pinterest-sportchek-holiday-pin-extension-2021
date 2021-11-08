@@ -23,7 +23,9 @@
                     :to="`category/${ category.id }`"
                 >
                     <h3>{{ category.title }}</h3>
-                    <img class="arrow" src="/images/red-arrow.svg" alt="">
+                    <div class="arrow-wrapper">
+                        <img class="arrow" src="/images/red-arrow.svg" alt="">
+                    </div>
                 </router-link>
             </div>
             <div class="row two">
@@ -35,7 +37,9 @@
                     :to="`category/${ category.id }`"
                 >
                     <h3>{{ category.title }}</h3>
-                    <img class="arrow" src="/images/red-arrow.svg" alt="">
+                    <div class="arrow-wrapper">
+                        <img class="arrow" src="/images/red-arrow.svg" alt="">
+                    </div>
                 </router-link>
             </div>
         </div>
@@ -319,60 +323,47 @@
 
     }
 
-    a.category.square:before {
-
-        content: "";
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 5px;
-        height: 100%;
-        width: 100%;
-        border-radius: 30px;
-
-        background-color: transparent;
-
-        transition: background-color 750ms ease;
-
-        z-index: -1;
-
-    }
-
-    a.category.circle:before {
-
-        content: "";
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 5px;
-        height: 100%;
-        width: 100%;
-
-        background-color: transparent;
-        border-radius: 50%;
-        transition: background-color 750ms ease;
-
-        z-index: -1;
-    }
-
-    a.category.square:hover:before {
-        background-color: color(SecondaryRed);
-    }
-
-    a.category.circle:hover:before {
-        background-color: color(SecondaryRed);
-    }
-
     a.category.square {
         border-radius: 25px;
     }
 
     a.category.circle {
         border-radius: 50%;
+    }
+
+    a.category.square:before,
+    a.category.circle:before {
+
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+
+        transform: translate(-50%, -50%);
+
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+
+        background-color: transparent;
+
+        transition: background-color 250ms ease;
+
+    }
+
+    a.category.square:before {
+        border-radius: 30px;
+    }
+
+    a.category.circle:before {
+        border-radius: inherit;
+    }
+
+    a.category.square:hover:before,
+    a.category.circle:hover:before {
+        background-color: color(SecondaryRed);
     }
 
     a.category h3 {
@@ -409,6 +400,19 @@
 
     a.category.circle h3 {
         bottom: 12%;
+    }
+
+    a.category div.arrow-wrapper {
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        border-radius: inherit;
+        overflow: hidden;
+
     }
 
     a.category img.arrow {
