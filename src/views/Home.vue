@@ -276,6 +276,9 @@
         background-position: center;
         background-repeat: no-repeat;
 
+        border: 4px solid transparent;
+        transition: transform 500ms ease;
+
         overflow: hidden;
 
         box-shadow: 0 10px 15px color(Black, 0.1);
@@ -289,6 +292,13 @@
             margin-top: 25px;
         }
 
+    }
+
+    a.category:hover {
+        border: 4px solid color(SecondaryRed);
+        transform: scale(1.2);
+
+        overflow: hidden;
     }
 
     a.category:first-of-type {
