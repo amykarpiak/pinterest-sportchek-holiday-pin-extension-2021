@@ -31,6 +31,9 @@
                 </span>
             </a>
         </div>
+        <div class="shop-the-category">
+            <a :href="data.category_link" target="_blank">Copy FPO</a>
+        </div>
         <Pagination :prevCategory="prevCategory" :nextCategory="nextCategory" />
     </section>
 </template>
@@ -141,7 +144,7 @@
         visibility: visible;
 
         clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
-        
+
         @include mobile-less {
             display: none;
             visibility: hidden;
@@ -175,12 +178,12 @@
             visibility: visible;
         }
     }
-    
+
     div.hero div.bg-responsive {
 
         display: none;
         visibility: hidden;
-        
+
         @include mobile-less {
             background-size: cover;
             background-position: center;
@@ -310,7 +313,8 @@
         z-index: 5;
 
         width: 100%;
-        padding: 0 50px 100px;
+        // padding: 0 50px 100px;
+        padding: 0 50px;
         max-width: 800px;
         margin: -75px auto 0;
 
@@ -318,15 +322,18 @@
         flex-wrap: wrap;
 
         @include mobile-less {
-            padding: 0 40px 100px;
+            // padding: 0 40px 100px;
+            padding: 0 40px;
         }
 
         @media (max-width: 600px) {
-            padding: 0 20px 250px;
+            // padding: 0 20px 250px;
+            padding: 0 20px;
         }
 
         @include phone {
-            padding: 0 15px 200px;
+            // padding: 0 15px 200px;
+            padding: 0 15px;
             margin: 200px auto 0;
         }
 
@@ -434,6 +441,61 @@
     a.product span.link-out img {
         height: 16px;
         margin-right: 5px;
+    }
+
+    div.shop-the-category {
+
+        text-align: center;
+        margin-bottom: 100px;
+
+        @media (max-width: 600px) {
+            margin-bottom: 250px;
+        }
+
+        @include phone {
+            margin-bottom: 200px;
+        }
+
+    }
+
+    div.shop-the-category a {
+
+        font-family: 'Good Office Pro Bold', sans-serif;
+        font-size: 18px;
+        color: color(White);
+        line-height: 1.2;
+        white-space: nowrap;
+        text-decoration: none;
+
+        height: 40px;
+        padding: 0 25px;
+
+        border-radius: 20px;
+        background-color: color(SecondaryRed);
+        box-shadow: 0 10px 15px color(Black, 0.025);
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: background-color 250ms ease, color 250ms ease;
+
+        @include mobile-less {
+            font-size: 16px;
+            padding: 0 25px;
+        }
+
+        @media (max-width: 600px) {
+            // font-size: 14px;
+        }
+
+    }
+
+    div.shop-the-category a:hover {
+        @media (min-width: 601px) {
+            background-color: color(White);
+            color: color(PrimaryRed);
+        }
     }
 
 </style>
