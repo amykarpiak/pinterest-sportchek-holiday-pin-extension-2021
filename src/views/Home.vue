@@ -276,10 +276,7 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        border: 4px solid transparent;
         transition: transform 500ms ease;
-
-        overflow: hidden;
 
         box-shadow: 0 10px 15px color(Black, 0.1);
 
@@ -294,11 +291,10 @@
 
     }
 
-    a.category:hover {
-        border: 4px solid color(SecondaryRed);
-        transform: scale(1.2);
-
-        overflow: hidden;
+    a.category:first-of-type {
+        @include mobile-less {
+            margin-top: 0;
+        }
     }
 
     a.category:first-of-type {
@@ -321,6 +317,56 @@
         background: linear-gradient(to top, color(Black, 0.4), transparent 50%);
         border-radius: inherit;
 
+    }
+
+    a.category.square:before {
+
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 5px;
+        height: 100%;
+        width: 100%;
+        border-radius: 30px;
+
+        background-color: transparent;
+
+        transition: background-color 750ms ease;
+
+        z-index: -1;
+
+    }
+
+    a.category.circle:before {
+
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 5px;
+        height: 100%;
+        width: 100%;
+
+        background-color: transparent;
+        border-radius: 50%;
+
+        transition: background-color 750ms ease;
+
+        z-index: -1;
+
+    }
+
+    a.category.square:hover:before {
+        background-color: color(SecondaryRed);
+    }
+
+    a.category.circle:hover:before {
+        background-color: color(SecondaryRed);
     }
 
     a.category.square {
