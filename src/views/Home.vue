@@ -260,12 +260,8 @@
 
     }
 
-    div.masthead h1,
-    div.masthead h2 {
-        font-family: 'Bagnard', serif;
-    }
-
     div.masthead h1 {
+        font-family: 'Bagnard', serif;
 
         font-size: 70px;
         line-height: 1.1;
@@ -287,6 +283,7 @@
     }
 
     div.masthead h2 {
+        font-family: 'Good Office Pro', sans-serif;
 
         font-size: 25px;
         line-height: 1.25;

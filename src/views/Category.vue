@@ -143,7 +143,7 @@
     div.hero div.bg {
 
         background-size: cover;
-        background-position: center;
+        background-position: 50% 30%;
         display: block;
         visibility: visible;
 
@@ -239,12 +239,8 @@
 
     }
 
-    div.hero h1,
-    div.hero h2 {
-        font-family: 'Bagnard', serif;
-    }
-
     div.hero h1 {
+        font-family: 'Bagnard', serif;
 
         font-size: 70px;
         line-height: 1.1;
@@ -284,6 +280,7 @@
     }
 
     div.hero h2 {
+        font-family: 'Good Office Pro', sans-serif;
 
         font-size: 25px;
         line-height: 1.25;
