@@ -26,7 +26,7 @@
                     <h3>{{ product.title }}</h3>
                 </div>
                 <span class="link-out">
-                    <img src="/images/logo-alt-black.svg" alt="">
+                    <LogoAlt />
                     Tap to shop
                 </span>
             </a>
@@ -42,11 +42,13 @@
 
     // Components.
     import Pagination from '@/components/Pagination';
+    import LogoAlt from '@/components/icons/LogoAlt';
 
     export default {
         name: 'Category',
         components: {
             Pagination,
+            LogoAlt,
         },
         data() {
             return {
@@ -360,7 +362,7 @@
         justify-content: space-between;
         align-items: center;
 
-        transition: border-color 250ms ease;
+        transition: border-color 750ms ease;
 
         @include mobile-less {
             width: calc(50% - 20px);
@@ -378,6 +380,14 @@
             margin-right: 15px;
         }
 
+    }
+
+    a.product:hover img{
+        transform: scale(1.1);
+    }
+
+    a.product:hover span.link-out{
+        color: color(SecondaryRed);
     }
 
     a.product:hover {
@@ -399,6 +409,8 @@
     a.product img.product-image {
         width: 100%;
         margin-top: -18%;
+
+        transition: transform 750ms ease;
     }
 
     a.product h3 {
@@ -427,6 +439,8 @@
         margin-top: 60px;
         padding: 15px;
 
+        transition: color 750ms ease;
+
         @include phone {
 
             padding: 10px;
@@ -436,11 +450,6 @@
 
         }
 
-    }
-
-    a.product span.link-out img {
-        height: 16px;
-        margin-right: 5px;
     }
 
     div.shop-the-category {
