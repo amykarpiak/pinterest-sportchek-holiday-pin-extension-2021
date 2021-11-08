@@ -32,7 +32,7 @@
             </a>
         </div>
         <div class="shop-the-category">
-            <a :href="data.category_link" target="_blank">Copy FPO</a>
+            <a :href="data.category_link" target="_blank">Shop All<Chevron /></a>
         </div>
         <Pagination :prevCategory="prevCategory" :nextCategory="nextCategory" />
     </section>
@@ -42,12 +42,14 @@
 
     // Components.
     import Pagination from '@/components/Pagination';
+    import Chevron from '@/components/icons/Chevron';
     import LogoAlt from '@/components/icons/LogoAlt';
 
     export default {
         name: 'Category',
         components: {
             Pagination,
+            Chevron,
             LogoAlt,
         },
         data() {
@@ -471,7 +473,7 @@
 
         font-family: 'Good Office Pro Bold', sans-serif;
         font-size: 18px;
-        color: color(White);
+        color: color(PrimaryRed);
         line-height: 1.2;
         white-space: nowrap;
         text-decoration: none;
@@ -479,8 +481,8 @@
         height: 40px;
         padding: 0 25px;
 
-        border-radius: 20px;
-        background-color: color(SecondaryRed);
+        border-radius: 10px;
+        background-color: color(White);
         box-shadow: 0 10px 15px color(Black, 0.025);
 
         display: inline-flex;
@@ -502,8 +504,29 @@
 
     div.shop-the-category a:hover {
         @media (min-width: 601px) {
-            background-color: color(White);
-            color: color(PrimaryRed);
+            background-color: color(SecondaryRed);
+            color: color(White);
+        }
+    }
+
+</style>
+
+<style lang="scss">
+
+    @import '../styles/_variables.scss';
+    @import '../styles/_mediaqueries.scss';
+
+    div.shop-the-category a svg {
+        margin-left: 15px;
+    }
+
+    div.shop-the-category a svg path {
+        stroke: color(PrimaryRed);
+    }
+
+    div.shop-the-category a:hover svg path {
+        @media (min-width: 601px) {
+            stroke: color(White);
         }
     }
 
