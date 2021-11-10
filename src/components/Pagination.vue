@@ -128,6 +128,11 @@
 
     }
 
+
+    .Pagination a.category > * {
+        pointer-events: none;
+    }
+
     .Pagination a.category:hover {
         @media (min-width: 601px) {
             background-color: color(White);
