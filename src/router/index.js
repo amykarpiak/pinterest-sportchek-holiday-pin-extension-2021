@@ -32,12 +32,13 @@ const router = new VueRouter({
       } else {
         window.scrollTo(0, 0);
       }
-      if (to.hash) {
+      /*if (to.hash) {
         return {
           selector: to.hash,
           behavior: 'smooth',
         }
       }
+      */
     },
 });
 

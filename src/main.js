@@ -1,6 +1,8 @@
 // Modules.
 import Vue from 'vue';
+import vueScrollto from 'vue-scrollto'
 
+Vue.use(vueScrollto)
 // Styles.
 import '@/styles/index.scss';
 

@@ -63,7 +63,7 @@
         },
         mounted() {
             preload();
-        }
+        },
     }
 
 </script>
