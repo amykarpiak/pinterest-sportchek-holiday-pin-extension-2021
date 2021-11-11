@@ -22,24 +22,24 @@
 
     @import '../../styles/_mediaqueries.scss';
 
-    svg.scroll {
+    svg.scroll{
 
         display: none;
 
-        @include mobile-less {
+        @include mobile-less{
             display: block;
         }
 
     }
 
-    .scroll-wrapper {
+    .scroll-wrapper{
         display: flex;
         justify-content: center;
         margin-top: 40px;
         margin-right: 15px;
     }
 
-    button {
+    button{
         background: transparent;
         border: none;
     }
